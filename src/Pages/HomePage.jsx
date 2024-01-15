@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import HomeLayout from "../Layouts/HomeLayout";
-import homeImage from "../assets/images/homeImage.jpg"
+import homeImage from "../assets/images/homePageMainImage.png";
 
 function HomePage() {
+
+
+
     return (
         <HomeLayout>
             <div className="pt-10 text-white flex items-center justify-center  gap-10 mx-16 h-[90vh] ">
