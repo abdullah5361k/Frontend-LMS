@@ -66,7 +66,7 @@ function Signup() {
         formData.append("password", signupData.password);
         formData.append("avatar", signupData.avatar);
 
-        // Dispatch create account
+        // Dispatch create acacount
         const response = await dispatch(createAccount(formData));
         if (response?.payload?.success) {
             navigator("/");
