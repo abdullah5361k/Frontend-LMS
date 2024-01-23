@@ -3,7 +3,7 @@ import HomeLayout from "../Layouts/HomeLayout";
 import { Link, useNavigate } from "react-router-dom";
 import toast, { Toaster } from 'react-hot-toast';
 import { useDispatch } from "react-redux";
-import { createAccount } from "../Redux/Slices/AuthSlice";
+import { login } from "../Redux/Slices/AuthSlice";
 
 function Login() {
 
@@ -25,12 +25,12 @@ function Login() {
 
     async function onLogin(e) {
         e.preventDefault();
-        if (!signupData.email || !signupData.password) {
+        if (!loginData.email || !loginData.password) {
             toast.error("Please fill all the fields");
         }
 
         // Dispatch create acacount
-        const response = await dispatch(createAccount(loginData));
+        const response = await dispatch(login(loginData));
         if (response?.payload?.success) {
             navigate("/");
         }
@@ -74,7 +74,7 @@ function Login() {
                     </div>
 
                     <button type="submit" className="mt-3 bg-yellow-600 hover:bg-yellow-500 transition-all ease-in-out duration-300 rounded-sm py-2 font-semibold " >
-                        Create account
+                        Login
                     </button>
 
                     <p className="text-center" >Don't have an account? <Link to="/signup" className="link cursor-pointer text-blue-300 " >Signup</Link> </p>

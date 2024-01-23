@@ -5,6 +5,7 @@ import AboutUsPage from "./Pages/AboutUs"
 import NotFound from './Pages/NotFound';
 import Signup from './Pages/SignUp';
 import Login from './Pages/Login';
+import CourseList from './Pages/Courses/CourseList';
 
 function App() {
 
@@ -13,6 +14,8 @@ function App() {
       <Routes>
         <Route path='/' element={<HomePage />}></Route>
         <Route path='/about' element={<AboutUsPage />}></Route>
+        <Route path='/courses' element={<CourseList />}></Route>
+
         <Route path='/signup' element={<Signup />} ></Route>
         <Route path='/login' element={<Login />} ></Route>
         <Route path='*' element={<NotFound />} ></Route>
