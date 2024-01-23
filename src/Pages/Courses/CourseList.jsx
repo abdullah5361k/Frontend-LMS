@@ -7,7 +7,7 @@ import CourseCard from "../../components/CourseCard";
 function CourseList() {
 
     const dispatch = useDispatch();
-    const courseData = useSelector(state => state.course);
+    const { courseData } = useSelector(state => state.course);
     async function loadCourses() {
         await dispatch(getAllCourses())
     }
@@ -26,7 +26,7 @@ function CourseList() {
                     </span>
                 </h1>
                 <div className="mb-10 flex flex-wrap gap-14 " >
-                    {/* {courseData?.map((element) => <CourseCard key={element._id} data={element} />)} */}
+                    {courseData?.map((element) => <CourseCard key={element._id} data={element} />)}
                 </div>
             </div>
         </HomeLayout>

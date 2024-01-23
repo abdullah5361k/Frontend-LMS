@@ -27,6 +27,10 @@ function HomeLayout({ children }) {
     async function handleLogout(e) {
         e.preventDefault();
         const res = await dispatch(logout())
+        console.log("Res ", res);
+        if (res) {
+            navigate("/")
+        }
     }
 
 

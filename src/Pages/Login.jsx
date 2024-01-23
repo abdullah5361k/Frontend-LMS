@@ -31,6 +31,7 @@ function Login() {
 
         // Dispatch create acacount
         const response = await dispatch(login(loginData));
+        console.log("Response ", response);
         if (response?.payload?.success) {
             navigate("/");
         }
