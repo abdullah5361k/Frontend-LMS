@@ -21,15 +21,17 @@ export const getAllCourses = createAsyncThunk("/courses/get", async () => {
 });
 
 
-export const createNewCourse = createAsyncThunk("/course/create", async () => {
+export const createNewCourse = createAsyncThunk("/course/create", async (data) => {
     try {
+        console.log("Click")
         const formData = new FormData();
         formData.append("title", data?.title);
         formData.append("category", data?.category);
         formData.append("description", data?.description);
         formData.append("createdBy", data?.createdBy);
+        formData.append("price", data?.price);
         formData.append("thumbnail", data?.thumbnail);
-        const res = axiosInstance.post("/courses/create", formData);
+        const res = axiosInstance.post("/course/create", formData);
         toast.promise(res, {
             loading: "Wait! ...",
             success: "Courses created successfully",

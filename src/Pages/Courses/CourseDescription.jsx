@@ -20,13 +20,13 @@ function CourseDescription() {
                             <div className="flex flex-col items-center justify-between text-xl" >
                                 <p className="font-semibold">
                                     <span className="text-yellow-500 font-bold">
-                                        Total lectures :
+                                        Total lectures : &nbsp;
                                     </span>
                                     {state?.lectures.length}
                                 </p>
                                 <p className="font-semibold">
                                     <span className="text-yellow-500 font-bold">
-                                        Instructor :
+                                        Instructor : &nbsp;
                                     </span>
                                     {state.createdBy}
                                 </p>

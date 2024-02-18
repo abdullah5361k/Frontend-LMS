@@ -16,6 +16,7 @@ function CreateCourse() {
         category: "",
         createdBy: "",
         description: "",
+        price: "",
         thumbnail: "",
         previewImage: ""
     })
@@ -44,6 +45,7 @@ function CreateCourse() {
     }
 
     async function onFormSubmit(e) {
+
         e.preventDefault();
 
         if (!userInput.title || !userInput.category || !userInput.createdBy || !userInput.thumbnail || !userInput.description) {
@@ -58,6 +60,7 @@ function CreateCourse() {
                 category: "",
                 createdBy: "",
                 description: "",
+                price: "",
                 thumbnail: "",
                 previewImage: ""
             })
@@ -139,6 +142,21 @@ function CreateCourse() {
                                 />
 
                             </div>
+                            <div className="flex flex-col gap-1">
+                                <label htmlFor="price" className="text-lg font-semibold " >
+                                    Course Price
+                                </label>
+                                <input
+                                    type="text"
+                                    name="price"
+                                    id="price"
+                                    placeholder="enter course instructor"
+                                    className="bg-transparent px-2 py-1 border"
+                                    value={userInput.price}
+                                    onChange={handleUserInput}
+                                />
+
+                            </div>
 
                             <div className="flex flex-col gap-1">
                                 <label htmlFor="category" className="text-lg font-semibold " >
@@ -158,7 +176,7 @@ function CreateCourse() {
 
                             <div className="flex flex-col gap-1">
                                 <label htmlFor="description" className="text-lg font-semibold " >
-                                    Category
+                                    Discription
                                 </label>
                                 <textarea
                                     name="description"

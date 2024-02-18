@@ -68,7 +68,7 @@ function Signup() {
 
 
         // Dispatch create acacount
-        const response = await dispatch(createAccount(signupData));
+        const response = await dispatch(createAccount(formData));
         if (response?.payload?.success) {
             navigate("/");
         }

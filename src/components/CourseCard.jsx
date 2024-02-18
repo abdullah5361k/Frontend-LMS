@@ -20,19 +20,19 @@ function CourseCard({ data }) {
                         {data?.description}
                     </p>
                     <p className="font-semibold" >
-                        <span className="text-yellow-500 font-bold" >Category : </span>
+                        <span className="text-yellow-500 font-bold" >Category :&nbsp; </span>
                         {data?.category}
                     </p>
                     <p className="font-semibold" >
-                        <span className="text-yellow-500 font-bold" >Total lectures : </span>
+                        <span className="text-yellow-500 font-bold" >Total lectures :&nbsp; </span>
                         {data?.lectures.length}
                     </p>
                     <p className="font-semibold" >
-                        <span className="text-yellow-500 font-bold" >Price : </span>
+                        <span className="text-yellow-500 font-bold" >Price :&nbsp; </span>
                         {data?.price}
                     </p>
                     <p className="font-semibold" >
-                        <span className="text-yellow-500 font-bold" >Instructor : </span>
+                        <span className="text-yellow-500 font-bold" >Instructor :&nbsp; </span>
                         {data?.createdBy}
                     </p>
                 </div>
